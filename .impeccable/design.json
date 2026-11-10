@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T07:33:12Z",
+  "title": "Design System: Detection Anomaly RBAC Prototype",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Black Canvas",
+        "canonical": "#000000",
+        "tonalRamp": ["#000000", "#050607", "#0a0c11", "#12161e", "#2a3140", "#707c90", "#b8bec9", "#eef1f6"]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Console Panel",
+        "canonical": "#0a0c11",
+        "tonalRamp": ["color-mix(in srgb, #0a0c11 35%, #000000)", "color-mix(in srgb, #0a0c11 55%, #000000)", "color-mix(in srgb, #0a0c11 75%, #000000)", "#0a0c11", "color-mix(in srgb, #0a0c11 80%, #ffffff)", "color-mix(in srgb, #0a0c11 60%, #ffffff)", "color-mix(in srgb, #0a0c11 35%, #ffffff)", "color-mix(in srgb, #0a0c11 15%, #ffffff)"]
+      },
+      "panel-raised": {
+        "role": "neutral",
+        "displayName": "Raised Navy",
+        "canonical": "#12161e",
+        "tonalRamp": ["color-mix(in srgb, #12161e 35%, #000000)", "color-mix(in srgb, #12161e 55%, #000000)", "color-mix(in srgb, #12161e 75%, #000000)", "#12161e", "color-mix(in srgb, #12161e 80%, #ffffff)", "color-mix(in srgb, #12161e 60%, #ffffff)", "color-mix(in srgb, #12161e 35%, #ffffff)", "color-mix(in srgb, #12161e 15%, #ffffff)"]
+      },
+      "panel-strong": {
+        "role": "neutral",
+        "displayName": "Strong Navy",
+        "canonical": "#171c25",
+        "tonalRamp": ["color-mix(in srgb, #171c25 35%, #000000)", "color-mix(in srgb, #171c25 55%, #000000)", "color-mix(in srgb, #171c25 75%, #000000)", "#171c25", "color-mix(in srgb, #171c25 80%, #ffffff)", "color-mix(in srgb, #171c25 60%, #ffffff)", "color-mix(in srgb, #171c25 35%, #ffffff)", "color-mix(in srgb, #171c25 15%, #ffffff)"]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Input Well",
+        "canonical": "#05070a",
+        "tonalRamp": ["color-mix(in srgb, #05070a 35%, #000000)", "color-mix(in srgb, #05070a 55%, #000000)", "color-mix(in srgb, #05070a 75%, #000000)", "#05070a", "color-mix(in srgb, #05070a 80%, #ffffff)", "color-mix(in srgb, #05070a 60%, #ffffff)", "color-mix(in srgb, #05070a 35%, #ffffff)", "color-mix(in srgb, #05070a 15%, #ffffff)"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Cool Divider",
+        "canonical": "#1a1f2a",
+        "tonalRamp": ["color-mix(in srgb, #1a1f2a 35%, #000000)", "color-mix(in srgb, #1a1f2a 55%, #000000)", "color-mix(in srgb, #1a1f2a 75%, #000000)", "#1a1f2a", "color-mix(in srgb, #1a1f2a 80%, #ffffff)", "color-mix(in srgb, #1a1f2a 60%, #ffffff)", "color-mix(in srgb, #1a1f2a 35%, #ffffff)", "color-mix(in srgb, #1a1f2a 15%, #ffffff)"]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Strong Divider",
+        "canonical": "#2a3140",
+        "tonalRamp": ["color-mix(in srgb, #2a3140 35%, #000000)", "color-mix(in srgb, #2a3140 55%, #000000)", "color-mix(in srgb, #2a3140 75%, #000000)", "#2a3140", "color-mix(in srgb, #2a3140 80%, #ffffff)", "color-mix(in srgb, #2a3140 60%, #ffffff)", "color-mix(in srgb, #2a3140 35%, #ffffff)", "color-mix(in srgb, #2a3140 15%, #ffffff)"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Console Text",
+        "canonical": "#e8ecf4",
+        "tonalRamp": ["color-mix(in srgb, #e8ecf4 20%, #000000)", "color-mix(in srgb, #e8ecf4 35%, #000000)", "color-mix(in srgb, #e8ecf4 55%, #000000)", "color-mix(in srgb, #e8ecf4 75%, #000000)", "#e8ecf4", "color-mix(in srgb, #e8ecf4 80%, #ffffff)", "color-mix(in srgb, #e8ecf4 60%, #ffffff)", "color-mix(in srgb, #e8ecf4 25%, #ffffff)"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Copy",
+        "canonical": "#98a3b6",
+        "tonalRamp": ["color-mix(in srgb, #98a3b6 25%, #000000)", "color-mix(in srgb, #98a3b6 40%, #000000)", "color-mix(in srgb, #98a3b6 60%, #000000)", "color-mix(in srgb, #98a3b6 80%, #000000)", "#98a3b6", "color-mix(in srgb, #98a3b6 75%, #ffffff)", "color-mix(in srgb, #98a3b6 50%, #ffffff)", "color-mix(in srgb, #98a3b6 20%, #ffffff)"]
+      },
+      "text-subtle": {
+        "role": "neutral",
+        "displayName": "Subtle Copy",
+        "canonical": "#707c90",
+        "tonalRamp": ["color-mix(in srgb, #707c90 25%, #000000)", "color-mix(in srgb, #707c90 40%, #000000)", "color-mix(in srgb, #707c90 60%, #000000)", "color-mix(in srgb, #707c90 80%, #000000)", "#707c90", "color-mix(in srgb, #707c90 75%, #ffffff)", "color-mix(in srgb, #707c90 50%, #ffffff)", "color-mix(in srgb, #707c90 20%, #ffffff)"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#82a8ea",
+        "tonalRamp": ["color-mix(in srgb, #82a8ea 28%, #000000)", "color-mix(in srgb, #82a8ea 45%, #000000)", "color-mix(in srgb, #82a8ea 65%, #000000)", "color-mix(in srgb, #82a8ea 82%, #000000)", "#82a8ea", "color-mix(in srgb, #82a8ea 75%, #ffffff)", "color-mix(in srgb, #82a8ea 50%, #ffffff)", "color-mix(in srgb, #82a8ea 20%, #ffffff)"]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Control Blue",
+        "canonical": "#2c58ad",
+        "tonalRamp": ["color-mix(in srgb, #2c58ad 30%, #000000)", "color-mix(in srgb, #2c58ad 48%, #000000)", "color-mix(in srgb, #2c58ad 68%, #000000)", "#2c58ad", "color-mix(in srgb, #2c58ad 80%, #ffffff)", "color-mix(in srgb, #2c58ad 60%, #ffffff)", "color-mix(in srgb, #2c58ad 35%, #ffffff)", "color-mix(in srgb, #2c58ad 15%, #ffffff)"]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Control Blue Hover",
+        "canonical": "#3866c4",
+        "tonalRamp": ["color-mix(in srgb, #3866c4 30%, #000000)", "color-mix(in srgb, #3866c4 48%, #000000)", "color-mix(in srgb, #3866c4 68%, #000000)", "#3866c4", "color-mix(in srgb, #3866c4 80%, #ffffff)", "color-mix(in srgb, #3866c4 60%, #ffffff)", "color-mix(in srgb, #3866c4 35%, #ffffff)", "color-mix(in srgb, #3866c4 15%, #ffffff)"]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "Operational Green",
+        "canonical": "#56ba8f",
+        "tonalRamp": ["color-mix(in srgb, #56ba8f 28%, #000000)", "color-mix(in srgb, #56ba8f 45%, #000000)", "color-mix(in srgb, #56ba8f 65%, #000000)", "color-mix(in srgb, #56ba8f 82%, #000000)", "#56ba8f", "color-mix(in srgb, #56ba8f 75%, #ffffff)", "color-mix(in srgb, #56ba8f 50%, #ffffff)", "color-mix(in srgb, #56ba8f 20%, #ffffff)"]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "Decision Amber",
+        "canonical": "#d6a54a",
+        "tonalRamp": ["color-mix(in srgb, #d6a54a 28%, #000000)", "color-mix(in srgb, #d6a54a 45%, #000000)", "color-mix(in srgb, #d6a54a 65%, #000000)", "color-mix(in srgb, #d6a54a 82%, #000000)", "#d6a54a", "color-mix(in srgb, #d6a54a 75%, #ffffff)", "color-mix(in srgb, #d6a54a 50%, #ffffff)", "color-mix(in srgb, #d6a54a 20%, #ffffff)"]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Restriction Red",
+        "canonical": "#e06c78",
+        "tonalRamp": ["color-mix(in srgb, #e06c78 28%, #000000)", "color-mix(in srgb, #e06c78 45%, #000000)", "color-mix(in srgb, #e06c78 65%, #000000)", "color-mix(in srgb, #e06c78 82%, #000000)", "#e06c78", "color-mix(in srgb, #e06c78 75%, #ffffff)", "color-mix(in srgb, #e06c78 50%, #ffffff)", "color-mix(in srgb, #e06c78 20%, #ffffff)"]
+      },
+      "info": {
+        "role": "secondary",
+        "displayName": "Telemetry Blue",
+        "canonical": "#6f9be8",
+        "tonalRamp": ["color-mix(in srgb, #6f9be8 28%, #000000)", "color-mix(in srgb, #6f9be8 45%, #000000)", "color-mix(in srgb, #6f9be8 65%, #000000)", "color-mix(in srgb, #6f9be8 82%, #000000)", "#6f9be8", "color-mix(in srgb, #6f9be8 75%, #ffffff)", "color-mix(in srgb, #6f9be8 50%, #ffffff)", "color-mix(in srgb, #6f9be8 20%, #ffffff)"]
+      }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Factual page titles in the operational shell." },
+      "title": { "displayName": "Title", "purpose": "Card and section headings." },
+      "title-compact": { "displayName": "Compact Title", "purpose": "Dense subsection and row headings." },
+      "body": { "displayName": "Body", "purpose": "Default interface copy, values, and control text." },
+      "label": { "displayName": "Label", "purpose": "Field labels, metadata, and secondary controls." },
+      "label-compact": { "displayName": "Compact Label", "purpose": "Uppercase prototype, table, and state microcopy." }
+    },
+    "shadows": [
+      { "name": "overlay-ambient", "value": "0 12px 32px rgba(0, 0, 0, .38)", "purpose": "Confirmation dialogs and toasts that float above the console plane." },
+      { "name": "field-focus", "value": "0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent)", "purpose": "Focused input, select, and textarea halo paired with an accent border." }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "160ms ease-out", "purpose": "Button, border, color, and switch state transitions." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Near-instant transition and animation duration under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "desktop-gate", "value": "1100px", "purpose": "Minimum viewport width at which the application shell and dashboards render." },
+      { "name": "compact-desktop", "value": "1300px", "purpose": "Maximum-width adjustment for metrics, permissions, and the login split." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single strongest action within a local decision area.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Save mock changes</button>",
+      "css": ".ds-btn-primary { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 7px 13px; border: 1px solid var(--primary); border-radius: 8px; background: var(--primary); color: #fff; font: 550 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background .16s ease-out, border-color .16s ease-out, color .16s ease-out; } .ds-btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } .ds-btn-primary:active { background: color-mix(in srgb, var(--primary-hover) 82%, #000); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A compact outlined action for ordinary operational controls.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Restart analysis</button>",
+      "css": ".ds-btn-secondary { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 7px 13px; border: 1px solid var(--line-2); border-radius: 8px; background: transparent; color: var(--text); font: 550 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background .16s ease-out, border-color .16s ease-out, color .16s ease-out; } .ds-btn-secondary:hover { background: var(--panel-2); border-color: var(--accent); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } .ds-btn-secondary:active { background: var(--panel-3); }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "A visibly destructive action kept separate from ordinary editing.",
+      "html": "<button class=\"ds-btn-danger\" type=\"button\">Retention cleanup</button>",
+      "css": ".ds-btn-danger { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 7px 13px; border: 1px solid color-mix(in srgb, var(--bad) 55%, var(--line)); border-radius: 8px; background: transparent; color: var(--bad); font: 550 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background .16s ease-out, border-color .16s ease-out, color .16s ease-out; } .ds-btn-danger:hover { background: color-mix(in srgb, var(--bad) 9%, transparent); border-color: var(--bad); } .ds-btn-danger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } .ds-btn-danger:active { background: color-mix(in srgb, var(--bad) 15%, transparent); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A recessed operational field with explicit labeling and strong focus feedback.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-camera-name\">Camera name</label><input class=\"ds-field\" id=\"ds-camera-name\" value=\"Gate Utama\" />",
+      "css": ".ds-field-label { display: block; margin: 0 0 5px; color: var(--muted); font: 500 12px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; } .ds-field { width: 100%; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--field); color: var(--text); font: 400 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; transition: border-color .16s ease-out, box-shadow .16s ease-out; } .ds-field:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line-2)); } .ds-field:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent); } .ds-field:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation Item",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "A compact persistent-rail destination with an accent active marker.",
+      "html": "<a class=\"ds-nav-item\" aria-current=\"page\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M8 10h8M8 14h5\"/></svg><span>Monitoring</span></a>",
+      "css": ".ds-nav-item { position: relative; min-height: 40px; display: flex; align-items: center; gap: 12px; padding: 8px 11px; border-radius: 8px; color: var(--muted); background: transparent; font: 500 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; text-decoration: none; transition: background .16s ease-out, color .16s ease-out; } .ds-nav-item:hover, .ds-nav-item[aria-current=\"page\"] { background: var(--panel-2); color: var(--text); } .ds-nav-item[aria-current=\"page\"]::before { content: \"\"; position: absolute; left: -12px; top: 9px; bottom: 9px; width: 1px; background: var(--accent); } .ds-nav-item[aria-current=\"page\"] svg { color: var(--accent); } .ds-nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } .ds-nav-item:active { background: var(--panel-3); }"
+    },
+    {
+      "name": "Allowed Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "A point-of-work state label for running or allowed permission state.",
+      "html": "<span class=\"ds-status-chip ds-status-chip-allowed\" role=\"status\">ALLOWED</span>",
+      "css": ".ds-status-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border: 1px solid var(--line-2); border-radius: 999px; font: 500 11px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; white-space: nowrap; } .ds-status-chip-allowed { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); background: color-mix(in srgb, var(--ok) 8%, transparent); } .ds-status-chip-allowed:hover { border-color: color-mix(in srgb, var(--ok) 68%, var(--line)); } .ds-status-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }"
+    },
+    {
+      "name": "Operational Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A flat, border-defined container for dense operational content.",
+      "html": "<article class=\"ds-card\"><header class=\"ds-card-head\"><div><h3>Camera configuration</h3><p>Permission groups remain separate.</p></div><span class=\"ds-card-state\">EDITABLE</span></header><div class=\"ds-card-body\">Local prototype controls and metadata belong here.</div></article>",
+      "css": ".ds-card { overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--text); font: 400 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; transition: border-color .16s ease-out; } .ds-card:hover { border-color: var(--line-2); } .ds-card:focus-within { border-color: var(--accent); } .ds-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding: 15px 16px; border-bottom: 1px solid var(--line); } .ds-card-head h3 { margin: 0 0 4px; font-size: 14px; line-height: 1.2; letter-spacing: -.02em; } .ds-card-head p { margin: 0; color: var(--muted); font-size: 12px; } .ds-card-state { color: var(--ok); font-size: 11px; } .ds-card-body { padding: 16px; color: var(--muted); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Kiki Control Room",
+    "overview": "The Kiki Control Room is a factual continuation of the established Kiki desktop monitoring world: black and deep navy surfaces, cool one-pixel boundaries, compact outlined controls, and tightly ordered operational information. It should feel like a working console whose visual hierarchy serves scanning, intervention, and verification—not a generic SaaS administration template.\n\nThis is a local-only RBAC prototype. Its interface must make simulated state, pending decisions, and permission boundaries legible at the point of work while preserving the density of camera monitoring, reports, settings, logs, and diagnostics. Blue is restrained to navigation, focus, and primary actions; green, amber, and red communicate operational meaning without turning the screen decorative.\n\nThe system is desktop-first by contract. Below the desktop gate, the shell and dashboard do not render; a plain explanatory notice replaces them. Inside the gate, hierarchy comes from tonal layering, precise borders, disciplined spacing, and semantic state—not oversized display type, decorative gradients, or ornamental effects.",
+    "keyCharacteristics": [
+      "Dense, ordered operational information with persistent navigation.",
+      "Black/navy tonal layers separated by cool one-pixel borders.",
+      "Restrained blue action and focus language with semantic green, amber, and red states.",
+      "Compact 8–10px corner language, outlined icons, and local permission context.",
+      "Explicit prototype boundaries and desktop-only behavior."
+    ],
+    "rules": [
+      { "name": "The One Blue Action Rule", "body": "Use Control Blue for the clearest next action or selected state; do not flood dense screens with competing blue fills.", "section": "colors" },
+      { "name": "The Semantic State Rule", "body": "Green means operational or allowed, amber means caution or pending, and red means denied, failed, or destructive. Never use these colors as decoration.", "section": "colors" },
+      { "name": "The Operational Scale Rule", "body": "Use compact hierarchy and weight before increasing size; giant text is outside the Kiki console language.", "section": "typography" },
+      { "name": "The Desktop Contract Rule", "body": "The 1100px gate is a product constraint, not a responsive suggestion: no application shell or dashboard exists below it.", "section": "layout" },
+      { "name": "The Flat Console Rule", "body": "Keep operational cards border-defined and flat; apply ambient shadow only when a surface must float above the working plane.", "section": "elevation" },
+      { "name": "The Bounded State Rule", "body": "Reserve pill geometry for status, role, and permission labels; ordinary actions and containers remain compact rounded rectangles.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do preserve the established Kiki black/navy operational console and its persistent desktop shell.",
+      "Do use cool one-pixel borders and tonal layering to order dense information.",
+      "Do keep blue primary actions restrained and semantic green, amber, and red consistent.",
+      "Do place permission and local-only prototype state at the point of work.",
+      "Do use compact outlined icons, tabular numerals for operational data, and visible keyboard focus."
+    ],
+    "donts": [
+      "Don't turn the interface into a generic SaaS admin template.",
+      "Don't introduce decorative gradients, ornamental glow, or shadows on resting cards.",
+      "Don't use giant display text where compact hierarchy will do.",
+      "Don't convert ordinary actions or containers into excessive pills.",
+      "Don't render, squeeze, or stack the application shell below the 1100px desktop gate.",
+      "Don't imply that hidden or disabled controls provide production authorization."
+    ]
+  }
+}
