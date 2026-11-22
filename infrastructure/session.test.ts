@@ -45,16 +45,47 @@ describe("mock identity and session", () => {
     expect(isSessionExpired(session, new Date("2026-11-10T03:00:00.000Z"))).toBe(true);
   });
 
-  it("round-trips, clears, and rejects malformed stored state", () => {
+  it("round-trips and clears a valid stored session", () => {
     const storage = memoryStorage();
     const session = createSession(accountById("usr-s")!, new Date("2026-11-10T02:00:00.000Z"));
     writeStoredSession(storage, session);
     expect(readStoredSession(storage)).toEqual(session);
     clearStoredSession(storage);
     expect(readStoredSession(storage)).toBeNull();
+  });
+
+  it("rejects malformed JSON and sessions missing any required field", () => {
+    const storage = memoryStorage();
+    const session = createSession(accountById("usr-s")!, new Date("2026-11-10T02:00:00.000Z"));
+
     storage.setItem(SESSION_KEY, "not-json");
     expect(readStoredSession(storage)).toBeNull();
-    storage.setItem(SESSION_KEY, JSON.stringify({ accountId: "x" }));
+
+    for (const field of ["accountId", "displayName", "role", "method", "createdAt", "expiresAt"] as const) {
+      const malformed: Partial<typeof session> = { ...session };
+      delete malformed[field];
+      storage.setItem(SESSION_KEY, JSON.stringify(malformed));
+      expect(readStoredSession(storage)).toBeNull();
+    }
+  });
+
+  it("rejects sessions with unknown roles or login methods", () => {
+    const storage = memoryStorage();
+    const session = createSession(accountById("usr-s")!, new Date("2026-11-10T02:00:00.000Z"));
+
+    storage.setItem(SESSION_KEY, JSON.stringify({ ...session, role: "UNKNOWN" }));
+    expect(readStoredSession(storage)).toBeNull();
+    storage.setItem(SESSION_KEY, JSON.stringify({ ...session, method: "UNKNOWN" }));
+    expect(readStoredSession(storage)).toBeNull();
+  });
+
+  it("rejects sessions with invalid timestamps", () => {
+    const storage = memoryStorage();
+    const session = createSession(accountById("usr-s")!, new Date("2026-11-10T02:00:00.000Z"));
+
+    storage.setItem(SESSION_KEY, JSON.stringify({ ...session, createdAt: "not-a-timestamp" }));
+    expect(readStoredSession(storage)).toBeNull();
+    storage.setItem(SESSION_KEY, JSON.stringify({ ...session, expiresAt: "not-a-timestamp" }));
     expect(readStoredSession(storage)).toBeNull();
   });
 });
